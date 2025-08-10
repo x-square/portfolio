@@ -1,11 +1,11 @@
 ---
-title: 'Technical case study on funnel analysis'
+title: 'Technical Case Study on Funnel Analysis'
 author: 'Chiawei Wang'
 date: 'July 2025'
 date-format: "MMMM YYYY"
 ---
 
-# Task 1 Analysis review: Understanding the impact of speed on growth
+# Task 1 Analysis Review: Understanding the Impact of Speed on Growth
 
 As a mentor at FinTech, you are reviewing Alex's analysis linking transfer speed to the likelihood of a customer making another transfer within 30 days.
 
@@ -30,7 +30,7 @@ The data shows a negative correlation between transfer speed and conversion rate
 
 I would recommend Alex and the Exchange team to focus on strategies that can further reduce transfer times, especially for those currently taking longer than 24 hours. This could involve optimising backend processes, improving system performance, or enhancing partnerships with financial teams to expedite transfers. Additionally, they should consider conducting user research to understand customer expectations regarding transfer speed and identify areas for improvement. Finally, it would be beneficial to monitor the impact of any changes made on conversion to ensure that efforts are effective in driving growth.
 
-# Task 2 Data analysis: Understanding conversion dynamics and anomalies
+# Task 2 Data Analysis: Understanding Conversion Dynamics and Anomalies
 
 This follow-up to Alex's analysis explores conversion dynamics and anomalies in transfer data to highlight areas needing product team attention.
 
@@ -120,8 +120,8 @@ ORDER BY region ASC;
 
 : Conversion rates by experience
 
-`Any questions, please reach out`
+`Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Senior Product Analyst\
+Product Analyst\
 <chiawei.w@outlook.com>
