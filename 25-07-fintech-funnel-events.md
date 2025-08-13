@@ -1,9 +1,11 @@
 ---
-title: 'Technical Case Study on Funnel Analysis'
+title: 'Technical Case Study on Funnel Analysis Using SQL'
 author: 'Chiawei Wang'
 date: 'July 2025'
-date-format: "MMMM YYYY"
+date-format: 'MMMM YYYY'
 ---
+
+`This technical analysis uses SQL to examine funnel events at FinTech, focusing on user conversion dynamics and the impact of transfer speed on customer retention.`
 
 # Task 1 Analysis Review: Understanding the Impact of Speed on Growth
 
