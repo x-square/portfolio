@@ -1,3 +1,5 @@
 # case-studies
 
-Welcome to this space for showcasing my diverse data science projects. Each case study highlights techniques, problem-solving approaches and insights from real-world data, demonstrating the challenges addressed and solutions implemented.
+Welcome to my portfolio of product analytics and data science projects.
+
+Each case study shows how I use different techniques, problem-solving methods, and insights from real-world data. It highlights the challenges I've tackled and the solutions I've put in place.
