@@ -1,5 +1,5 @@
 ---
-title: "Analyzing Students' Mental Health Using SQL"
+title: "Analyzing Students' Mental Health with SQL"
 author: 'Chiawei Wang'
 date: 'August 2025'
 date-format: 'MMMM YYYY'
