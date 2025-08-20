@@ -1,5 +1,5 @@
 ---
-title: 'Technical Case Study on Funnel Analysis Using SQL'
+title: 'Technical Case Study on Funnel Analysis with SQL'
 author: 'Chiawei Wang'
 date: 'July 2025'
 date-format: 'MMMM YYYY'
