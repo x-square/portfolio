@@ -2,7 +2,6 @@
 title: "Analyzing Students' Mental Health with SQL"
 author: 'Chiawei Wang'
 date: 'August 2025'
-date-format: 'MMMM YYYY'
 ---
 
 `This document presents a technical case study using SQL to analyze the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
