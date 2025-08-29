@@ -1,12 +1,12 @@
 ---
-title: "Analyzing Students' Mental Health with SQL"
+title: "Analysing Students' Mental Health with SQL"
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
 
-`This document presents a technical case study using SQL to analyze the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
+`This document presents a technical case study using SQL to analyse the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
 
-# Technical Case Study: Analyzing Students' Mental Health
+# Technical Case Study: Analysing Students' Mental Health
 
 ## Background
 
@@ -18,9 +18,10 @@ A Japanese international university conducted a survey in 2018, later approved b
 - **Social Connectedness** (SCS test)
 - **Acculturative Stress** (ASISS test)
 
-## Research Question
+## Research Questions
 
-Does the length of stay in a foreign country influence the mental health of international students? Specifically, are longer stays associated with higher levels of depression and acculturative stress?
+1. Does the length of stay in a foreign country influence the mental health of international students?
+2. Specifically, are longer stays associated with higher levels of depression and acculturative stress?
 
 ## Data Overview
 
@@ -31,7 +32,7 @@ The dataset includes the following columns:
 | `inter_dom`     | Student type (international or domestic)          |
 | `japanese_cate` | Japanese language proficiency                     |
 | `english_cate`  | English language proficiency                      |
-| `academic`      | Academic level (undergraduate or graduate)        |
+| `academic`      | Academic level (undergraduate or postgraduate)    |
 | `age`           | Age of student                                    |
 | `stay`          | Length of stay in years                           |
 | `todep`         | Depression score (PHQ-9)                          |
@@ -40,10 +41,10 @@ The dataset includes the following columns:
 
 ## Approach
 
-We use PostgreSQL to analyze the relationship between length of stay and mental health outcomes among international students. The following SQL query summarizes the average scores for depression, social connectedness, and acculturative stress by length of stay:
+We use PostgreSQL to analyse the relationship between length of stay and mental health outcomes among international students. The following SQL query summarises the average scores for depression, social connectedness, and acculturative stress by length of stay:
 
 ```sql
--- Find the number of international students and their average scores by length of stay, in descending order of length of stay
+-- Count international students and average scores by length of stay, longest stay first
 SELECT stay, 
        COUNT(*) AS count_int,
        ROUND(AVG(todep), 2) AS average_phq, 
@@ -81,5 +82,5 @@ The analysis indicates that international students who remain longer in a foreig
 `Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Product Analyst\
+Data & Product Analyst\
 <chiawei.w@outlook.com>
