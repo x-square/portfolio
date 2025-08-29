@@ -2,13 +2,6 @@
 title: 'Funnel Analysis at FinTech with SQL'
 author: 'Chiawei Wang'
 date: 'July 2025'
-geometry: 'margin=1in'
-numbersections: true
-header-includes: # LaTeX packages and settings
-    - \usepackage{charter} # Use Charter serif font for main text
-    - \usepackage{inconsolata} # Use Inconsolata for code
-    - \usepackage{fvextra} # Improved code formatting
-    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\footnotesize,breaklines,commandchars=\\\{\}} # Small font, line wrap, escape chars for code blocks
 ---
 
 `This technical analysis uses SQL to examine funnel events at FinTech, focusing on user conversion dynamics and the impact of transfer speed on customer retention.`
