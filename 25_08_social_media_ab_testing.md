@@ -6,7 +6,7 @@ date: 'August 2025'
 
 `This technical report presents the findings of an A/B/C testing experiment conducted by SocialMedia to evaluate the effectiveness of different mobile number verification methods.`
 
-# The Challenge
+# The Challenge 
 
 For SocialMedia's new phone number verification methods, we have three versions:
 
