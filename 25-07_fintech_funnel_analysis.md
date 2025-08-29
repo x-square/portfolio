@@ -1,12 +1,19 @@
 ---
-title: 'Technical Case Study on Funnel Analysis with SQL'
+title: 'Funnel Analysis at FinTech with SQL'
 author: 'Chiawei Wang'
 date: 'July 2025'
+geometry: 'margin=1in'
+numbersections: true
+header-includes: # LaTeX packages and settings
+    - \usepackage{charter} # Use Charter serif font for main text
+    - \usepackage{inconsolata} # Use Inconsolata for code
+    - \usepackage{fvextra} # Improved code formatting
+    - \DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\footnotesize,breaklines,commandchars=\\\{\}} # Small font, line wrap, escape chars for code blocks
 ---
 
 `This technical analysis uses SQL to examine funnel events at FinTech, focusing on user conversion dynamics and the impact of transfer speed on customer retention.`
 
-# Task 1 Analysis Review: Understanding the Impact of Speed on Growth
+# Analysis Review: Understanding the Impact of Speed on Growth
 
 As a mentor at FinTech, you are reviewing Alex's analysis linking transfer speed to the likelihood of a customer making another transfer within 30 days.
 
@@ -19,23 +26,23 @@ As a mentor at FinTech, you are reviewing Alex's analysis linking transfer speed
 
 : Impact of speed on growth
 
-**1.1. How do you think Alex would interpret these results?**
+## How do you think Alex would interpret these results?
 
 Alex would interpret these results as indicating a strong relationship between transfer speed and customer retention. The data suggests that customers who experience faster transfers are more likely to return for another transfer within 30 days. The highest conversion rate is seen in transfers completed in 0 to 1 hour, with a conversion rate of 87%. As the time taken for transfers increases, the conversion rate decreases, with transfers taking longer than 24 hours having a conversion rate of only 61%. This indicates that transfer speed is a significant factor influencing customer behaviour and retention.
 
-**1.2. What insights can you draw from this data?**
-   
+## What insights can you draw from this data?
+
 The data shows a negative correlation between transfer speed and conversion rates. The longer a transfer takes, the less likely customers are to make another one within 30 days. Therefore, optimising transfer speed could be a key strategy to enhance user satisfaction and drive growth. But what statistical tests do we have to back this up?
 
-**1.3. What would you advise Alex and the Exchange team to do based on these findings?**
+## What would you advise Alex and the Exchange team to do based on these findings?
 
 I would recommend Alex and the Exchange team to focus on strategies that can further reduce transfer times, especially for those currently taking longer than 24 hours. This could involve optimising backend processes, improving system performance, or enhancing partnerships with financial teams to expedite transfers. Additionally, they should consider conducting user research to understand customer expectations regarding transfer speed and identify areas for improvement. Finally, it would be beneficial to monitor the impact of any changes made on conversion to ensure that efforts are effective in driving growth.
 
-# Task 2 Data Analysis: Understanding Conversion Dynamics and Anomalies
+# Data Analysis: Understanding Conversion Dynamics and Anomalies
 
 This follow-up to Alex's analysis explores conversion dynamics and anomalies in transfer data to highlight areas needing product team attention.
 
-**2.1. Do you notice any meaningful patterns in the conversion data? If so, what might be driving them?**
+## Do you notice any meaningful patterns in the conversion data? If so, what might be driving them?
 
 As most transfers from created to transferred are completed on the same day, we cannot conclude that the transfer speed is the root cause of the conversion rates. However, we can observe that 44.85% of transfers created are actually funded, and 71.34% of funded transfers are successfully transferred. This means there's a big drop-off between someone starting a transfer and actually funding it. The root cause of this drop-off could be due to several factors, such as customers not having sufficient funds, encountering issues during the funding process, or changing their minds about the transfer.
 
@@ -55,8 +62,7 @@ SELECT
     -- Calculate the conversion rate from 'Transfer Funded' to 'Transfer Transferred' as a percentage
     ROUND(CAST(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Transferred' THEN user_id END) AS REAL) * 100.0 /
     NULLIF(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Funded' THEN user_id END), 0), 2) AS conversion_funded_to_transferred
-FROM
-    "25-07-fintech-funnel-events";
+FROM '25-07-fintech-funnel-events';
 ```
 
 | **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
@@ -65,7 +71,7 @@ FROM
 
 : Overall conversion rates
 
-**2.2. Are there any irregularities in the data that the product team should investigate? What could be causing them from the user's perspective?**
+## Are there any irregularities in the data that the product team should investigate? What could be causing them from the user's perspective?
 
 To dive deeper, we break down the data by the available dimensions to examine anomalies. We do not see sudden declines or raises on a particular day, but we do observe disproportionate changes in segments of region, platform, and experience. The metric anomaly likely comes from issues in the customer experience. Some regions may have payment barriers, iOS users might face bugs after funding, and new users could find the process confusing. These problems may lead to uneven conversion rates across different groups.
 
@@ -93,7 +99,7 @@ SELECT
     -- Calculate the conversion rate from 'Transfer Funded' to 'Transfer Transferred' as a percentage
     ROUND(CAST(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Transferred' THEN user_id END) AS REAL) * 100.0 /
     NULLIF(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Funded' THEN user_id END), 0), 2) AS conversion_funded_to_transferred
-FROM "25-07-fintech-funnel-events"
+FROM '25-07-fintech-funnel-events'
 GROUP BY region
 ORDER BY region ASC;
 ```
@@ -101,7 +107,7 @@ ORDER BY region ASC;
 | **region** | **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
 | ---------- | ----------------- | ---------------- | --------------------- | -------------------------------- | ------------------------------------ |
 | Europe     | 22,309            | 10,729           | 7,003                 | 48.09%                           | 65.28%                               |
-| South Am   | 11,904            | 5,222            | 3,715                 | 43.87%                           | 71.13%                               |
+| SouthAm    | 11,904            | 5,222            | 3,715                 | 43.87%                           | 71.13%                               |
 | Asia       | 6,736             | 1,865            | 1,733                 | 27.69%                           | 92.92%                               |
 
 : Conversion rates by region
@@ -124,5 +130,5 @@ ORDER BY region ASC;
 `Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Product Analyst\
+Data & Product Analyst\
 <chiawei.w@outlook.com>
