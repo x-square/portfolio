@@ -6,7 +6,7 @@ date: 'August 2025'
 
 `This technical report presents the findings of an A/B/C testing experiment conducted by SocialMedia to evaluate the effectiveness of different mobile number verification methods.`
 
-# The Challenge 
+# The Challenge
 
 For SocialMedia's new phone number verification methods, we have three versions:
 
@@ -332,5 +332,5 @@ Due to time limits, I couldn't run a logistic regression. But, here is an idea:
 `Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Data & Product Analyst\
+Product & Data Analyst\
 <chiawei.w@outlook.com>
