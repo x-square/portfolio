@@ -55,7 +55,7 @@ SELECT
     -- Calculate the conversion rate from 'Transfer Funded' to 'Transfer Transferred' as a percentage
     ROUND(CAST(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Transferred' THEN user_id END) AS REAL) * 100.0 /
     NULLIF(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Funded' THEN user_id END), 0), 2) AS conversion_funded_to_transferred
-FROM '25-07-fintech-funnel-events';
+FROM funnel_analysis;
 ```
 
 | **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
@@ -92,7 +92,7 @@ SELECT
     -- Calculate the conversion rate from 'Transfer Funded' to 'Transfer Transferred' as a percentage
     ROUND(CAST(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Transferred' THEN user_id END) AS REAL) * 100.0 /
     NULLIF(COUNT(DISTINCT CASE WHEN event_name = 'Transfer Funded' THEN user_id END), 0), 2) AS conversion_funded_to_transferred
-FROM '25-07-fintech-funnel-events'
+FROM funnel_analysis
 GROUP BY region
 ORDER BY region ASC;
 ```
@@ -123,5 +123,5 @@ ORDER BY region ASC;
 `Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Data & Product Analyst\
+Product & Data Analyst\
 <chiawei.w@outlook.com>
