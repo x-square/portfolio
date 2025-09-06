@@ -82,5 +82,5 @@ The analysis indicates that international students who remain longer in a foreig
 `Any questions, please reach out!`
 
 Chiawei Wang PhD\
-Data & Product Analyst\
+Product & Data Analyst\
 <chiawei.w@outlook.com>
