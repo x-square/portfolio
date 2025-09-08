@@ -1,5 +1,5 @@
 ---
-title: 'A/B Testing at SocialMedia with SQL'
+title: 'A/B Testing on Mobile Verification at SocialMedia with SQL'
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
