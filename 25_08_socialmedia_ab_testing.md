@@ -1,5 +1,5 @@
 ---
-title: 'A/B Testing on Mobile Verification with SQL'
+title: 'A/B Testing on Mobile Verification with SQL and Python'
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
@@ -243,20 +243,20 @@ I used Python to run a chi-squared test to see if the differences in verificatio
 
 ```python
 # Python script for chi-squared test
-print("Chi-squared Test for Verification Rate by Group")
+print('Chi-squared Test for Verification Rate by Group')
 contingency_table = pd.crosstab(verification_df['group'], verification_df['verified'])
 chi2, p_chi2, dof, expected = chi2_contingency(contingency_table)
 
-print(f"Contingency Table:\n{contingency_table}")
-print(f"Chi-squared statistic: {chi2}")
-print(f"P-value: {p_chi2}")
+print(f'Contingency Table:\n{contingency_table}')
+print(f'Chi-squared statistic: {chi2}')
+print(f'P-value: {p_chi2}')
 
 if p_chi2 < 0.01:
-    print("Conclusion: The p-value is less than 0.01, indicating a highly statistically significant difference")
-    print("in verification rates across the different groups (A, B, C).")
+    print('Conclusion: The p-value is less than 0.01, indicating a highly statistically significant difference')
+    print('in verification rates across the different groups (A, B, C).')
 else:
-    print("Conclusion: The p-value is greater than or equal to 0.05, indicating no statistically significant difference")
-    print("in verification rates across the different groups (A, B, C).")
+    print('Conclusion: The p-value is greater than or equal to 0.05, indicating no statistically significant difference')
+    print('in verification rates across the different groups (A, B, C).')
 ```
 
 ## ANOVA Test for Average Verification Cost by Group
@@ -279,7 +279,7 @@ I used Python to run an ANOVA test to check if the average cost per successful v
 
 ```python
 # Python script for ANOVA test
-print("ANOVA Test for Average Cost per Successful Verification by Group")
+print('ANOVA Test for Average Cost per Successful Verification by Group')
 
 # Ensure there are successful verifications in each group before running ANOVA
 if not successful_verifications_df.empty:
@@ -299,23 +299,23 @@ if not successful_verifications_df.empty:
     if len(groups_with_data) >= 2:
         f_stat, p_anova = f_oneway(*groups_with_data)
 
-        print(f"Average Cost by Group (Successful Verifications Only):")
-        print(f"Group A Avg Cost: ${group_a_costs.mean():.3f}")
-        print(f"Group B Avg Cost: ${group_b_costs.mean():.3f}")
-        print(f"Group C Avg Cost: ${group_c_costs.mean():.3f}")
-        print(f"F-statistic: {f_stat}")
-        print(f"P-value: {p_anova}")
+        print(f'Average Cost by Group (Successful Verifications Only):')
+        print(f'Group A Avg Cost: ${group_a_costs.mean():.3f}')
+        print(f'Group B Avg Cost: ${group_b_costs.mean():.3f}')
+        print(f'Group C Avg Cost: ${group_c_costs.mean():.3f}')
+        print(f'F-statistic: {f_stat}')
+        print(f'P-value: {p_anova}')
 
         if p_anova < 0.05:
-            print("Conclusion: The p-value is less than 0.05, indicating a statistically significant difference")
-            print("in the average cost per successful verification across the different groups (A, B, C).")
+            print('Conclusion: The p-value is less than 0.05, indicating a statistically significant difference')
+            print('in the average cost per successful verification across the different groups (A, B, C).')
         else:
-            print("Conclusion: The p-value is greater than or equal to 0.05, indicating no statistically significant")
-            print("difference in the average cost per successful verification across the different groups (A, B, C).")
+            print('Conclusion: The p-value is greater than or equal to 0.05, indicating no statistically significant')
+            print('difference in the average cost per successful verification across the different groups (A, B, C).')
     else:
-        print("Not enough groups with successful verification data to perform ANOVA.")
+        print('Not enough groups with successful verification data to perform ANOVA.')
 else:
-    print("No successful verifications found to perform cost analysis.")
+    print('No successful verifications found to perform cost analysis.')
 ```
 
 ## Logistic Regression for Verification Success Prediction
