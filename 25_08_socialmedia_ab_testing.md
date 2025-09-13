@@ -1,5 +1,5 @@
 ---
-title: 'A/B Testing on Mobile Verification with SQL and Python'
+title: 'A/B Test on Mobile Verification with SQL and Python'
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
