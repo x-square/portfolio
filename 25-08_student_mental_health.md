@@ -18,6 +18,11 @@ A Japanese international university conducted a survey in 2018, later approved b
 - **Social Connectedness** (SCS test)
 - **Acculturative Stress** (ASISS test)
 
+## Research Questions
+
+1. Does the length of stay in a foreign country influence the mental health of international students?
+2. Specifically, are longer stays associated with higher levels of depression and acculturative stress?
+
 ## Data Overview
 
 The dataset includes the following columns:
@@ -33,11 +38,6 @@ The dataset includes the following columns:
 | `todep`         | Depression score (PHQ-9)                          |
 | `tosc`          | Social connectedness score (SCS)                  |
 | `toas`          | Acculturative stress score (ASISS)                |
-
-## Research Questions
-
-1. Does the length of stay in a foreign country influence the mental health of international students?
-2. Specifically, are longer stays associated with higher levels of depression and acculturative stress?
 
 ## Approach
 
