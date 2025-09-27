@@ -44,7 +44,6 @@ The dataset includes the following columns:
 We use PostgreSQL to analyse the relationship between length of stay and mental health outcomes among international students. The following SQL query summarises the average scores for depression, social connectedness, and acculturative stress by length of stay:
 
 ```sql
--- Count international students and average scores by length of stay, longest stay first
 SELECT stay, 
        COUNT(*) AS count_int,
        ROUND(AVG(todep), 2) AS average_phq, 
