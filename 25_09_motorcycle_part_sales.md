@@ -42,11 +42,11 @@ The dataset includes the following columns:
 
 ```sql
 SELECT product_line,
-    warehouse,
-    CASE WHEN EXTRACT('month' from date) = 6 THEN 'June'
-         WHEN EXTRACT('month' from date) = 7 THEN 'July'
-         WHEN EXTRACT('month' from date) = 8 THEN 'August'
-    END as month,
+       warehouse,
+       CASE WHEN EXTRACT('month' from date) = 6 THEN 'June'
+            WHEN EXTRACT('month' from date) = 7 THEN 'July'
+            WHEN EXTRACT('month' from date) = 8 THEN 'August'
+            END as month,
        SUM(total) - SUM(payment_fee) AS net_revenue
 FROM sales
 WHERE client_type = 'Wholesale'
