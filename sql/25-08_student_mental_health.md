@@ -1,5 +1,5 @@
 ---
-title: "Analysing Students' Mental Health with SQL"
+title: "Analysing Students' Mental Health"
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
