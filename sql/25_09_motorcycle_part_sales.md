@@ -1,5 +1,5 @@
 ---
-title: 'Analysing Motorcycle Part Sales with SQL'
+title: 'Analysing Motorcycle Part Sales'
 author: 'Chiawei Wang'
 date: 'September 2025'
 ---
