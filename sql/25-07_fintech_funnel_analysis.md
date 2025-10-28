@@ -1,5 +1,5 @@
 ---
-title: 'Funnel Analysis on Conversion at FinTech with SQL'
+title: 'Funnel Analysis on Conversion at FinTech'
 author: 'Chiawei Wang'
 date: 'July 2025'
 ---
