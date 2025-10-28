@@ -1,4 +1,4 @@
-# case_studies
+# case studies
 
 Welcome to my portfolio of product analytics and data analytics projects.
 
