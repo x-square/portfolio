@@ -6,11 +6,11 @@ date: 'September 2025'
 
 `This document presents a technical case study using SQL to analyze motorcycle part sales data from a company operating three warehouses. The focus is on calculating net revenue from wholesale sales by product line, month, and warehouse.`
 
-# Technical Report: Analyzing Motorcycle Part Sales with SQL 
+# Technical Report: Analyzing Motorcycle Part Sales with SQL
 
 ## Background
 
-The company operates three warehouses and offers a diverse range of motorcycle parts through both retail and wholesale channels. Payment options include credit card, cash, and bank transfer, each with its own transaction fee. To support strategic planning, it is important to analyze the net revenue from wholesale sales, broken down by product line, month, and warehouse.
+The company operates three warehouses and offers a diverse range of motorcycle parts through both retail and wholesale channels. Payment options include credit card, cash, and bank transfer, each with its own transaction fee. To support the strategic planning, it is important to analyze the net revenue from wholesale sales, broken down by product line, month, and warehouse.
 
 ## Research Questions
 
