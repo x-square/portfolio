@@ -6,7 +6,7 @@ date: 'September 2025'
 
 `This document presents a technical case study using SQL to analyze motorcycle part sales data from a company operating three warehouses. The focus is on calculating net revenue from wholesale sales by product line, month, and warehouse.`
 
-# Technical Report: Analyzing Motorcycle Part Sales with SQL
+# Technical Report: Analyzing Motorcycle Part Sales with SQL 
 
 ## Background
 
