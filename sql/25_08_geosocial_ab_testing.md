@@ -1,14 +1,14 @@
 ---
-title: 'A/B Testing on Mobile Verification at SocialMedia'
+title: 'A/B Testing on Mobile Verification at GeoSocial'
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
 
-`This technical report presents the findings of an A/B/C testing experiment conducted by SocialMedia to evaluate the effectiveness of different mobile number verification methods.`
+`This technical report presents the findings of an A/B/C testing experiment conducted by GeoSocial to evaluate the effectiveness of different mobile number verification methods.`
 
 # The Challenge
 
-For SocialMedia's new phone number verification methods, we have three versions:
+For GeoSocial's new phone number verification methods, we have three versions:
 
 - **Version A:** SMS verification only
 - **Version B:** SMS verification marked, followed by unmarked WhatsApp verification
