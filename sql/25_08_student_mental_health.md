@@ -27,17 +27,17 @@ A Japanese international university conducted a survey in 2018, later approved b
 
 The dataset includes the following columns:
 
-| Field Name      | Description                                       |
-| --------------- | ------------------------------------------------- |
-| `inter_dom`     | Student type (international or domestic)          |
-| `japanese_cate` | Japanese language proficiency                     |
-| `english_cate`  | English language proficiency                      |
-| `academic`      | Academic level (undergraduate or postgraduate)    |
-| `age`           | Age of student                                    |
-| `stay`          | Length of stay in years                           |
-| `todep`         | Depression score (PHQ-9)                          |
-| `tosc`          | Social connectedness score (SCS)                  |
-| `toas`          | Acculturative stress score (ASISS)                |
+| Field Name      | Type    | Description                                    |
+| --------------- | ------- | ---------------------------------------------- |
+| `inter_dom`     | VARCHAR | Student type (international or domestic)       |
+| `japanese_cate` | VARCHAR | Japanese language proficiency                  |
+| `english_cate`  | VARCHAR | English language proficiency                   |
+| `academic`      | VARCHAR | Academic level (undergraduate or postgraduate) |
+| `age`           | INT     | Age of student                                 |
+| `stay`          | INT     | Length of stay in years                        |
+| `todep`         | INT     | Depression score (PHQ-9)                       |
+| `tosc`          | INT     | Social connectedness score (SCS)               |
+| `toas`          | INT     | Acculturative stress score (ASISS)             |
 
 ## Approach
 
