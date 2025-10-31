@@ -1,12 +1,12 @@
 ---
-title: "Analysing Students' Mental Health"
+title: "Analyzing Students' Mental Health"
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
 
-`This document presents a technical case study using SQL to analyse the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
+`This document presents a technical case study using SQL to analyze the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
 
-# Technical Report: Analysing Students' Mental Health
+# Technical Report: Analyzing Students' Mental Health
 
 ## Background
 
@@ -41,7 +41,7 @@ The dataset includes the following columns:
 
 ## Approach
 
-We use PostgreSQL to analyse the relationship between length of stay and mental health outcomes among international students. The following SQL query summarises the average scores for depression, social connectedness, and acculturative stress by length of stay:
+We use PostgreSQL to analyze the relationship between length of stay and mental health outcomes among international students. The following SQL query summarizes the average scores for depression, social connectedness, and acculturative stress by length of stay:
 
 ```sql
 SELECT stay, 
