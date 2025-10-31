@@ -6,7 +6,7 @@ date: 'August 2025'
 
 `This document presents a technical case study using SQL to analyze the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
 
-# Technical Report: Analyzing Students' Mental Health
+# Technical Report: Analyzing Students' Mental Health 
 
 ## Background
 
