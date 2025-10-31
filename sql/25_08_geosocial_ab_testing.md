@@ -4,7 +4,7 @@ author: 'Chiawei Wang'
 date: 'August 2025'
 ---
 
-`This technical report presents the findings of an A/B/C testing experiment conducted by GeoSocial to evaluate the effectiveness of different mobile number verification methods.`
+`This technical analysis presents the findings of an A/B/C testing experiment conducted by GeoSocial to evaluate the effectiveness of different mobile number verification methods.`
 
 # The Challenge
 
