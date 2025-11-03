@@ -1,5 +1,5 @@
 ---
-title: 'A/B Testing on Mobile Verification at GeoSocial'
+title: 'A/B Testing on Mobile Verification Methods'
 author: 'Chiawei Wang'
 date: 'August 2025'
 ---
