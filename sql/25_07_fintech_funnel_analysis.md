@@ -1,5 +1,5 @@
 ---
-title: 'Funnel Analysis on Conversion at FinTech'
+title: 'Segmented Funnel Analysis of Transfer Conversion Dynamics'
 author: 'Chiawei Wang'
 date: 'July 2025'
 ---
