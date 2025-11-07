@@ -4,7 +4,7 @@ author: 'Chiawei Wang'
 date: 'October 2025'
 ---
 
-`This case study explores the golden era of video games by analyzing sales data and review scores from both critics and users. By examining trends over the years, we aim to identify periods of exceptional quality and popularity in the gaming industry.`
+`This case study explores the golden era of video games by analyzing sales data and review scores from both users and critics. By examining trends over the years, we aim to identify periods of exceptional quality and popularity in the gaming industry.`
 
 # Challenge
 
