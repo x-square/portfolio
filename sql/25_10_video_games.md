@@ -1,6 +1,8 @@
 ---
 title: 'When Was the Golden Era of Video Games?'
-author: 'Chiawei Wang'
+author: 'Chiawei Wang, PhD'
+role: 'Data & Product Analyst'
+email: 'chiawei.w@outlook.com'
 date: 'October 2025'
 ---
 
@@ -144,7 +146,3 @@ ORDER BY year ASC;
 The analysis of video game sales and reviews reveals significant insights into the industry's evolution. The top-selling games highlight the enduring popularity of franchises like Nintendo's Mario series and the impact of multiplayer games like Counter-Strike and PUBG. The years 1998 and 2004 stand out as peak periods for critical acclaim, suggesting a golden era of innovation and quality in game development. Additionally, the identified golden years based on user and critic reviews underscore the dynamic nature of gaming preferences, with notable peaks in 1997, 1998, 2004, 2008, 2009, and 2010. These findings provide valuable insights for developers and publishers aiming to understand market trends and consumer preferences in the gaming industry.
 
 `Any questions, please reach out!`
-
-Chiawei Wang, PhD\
-Data & Product Analyst\
-<chiawei.w@outlook.com>
