@@ -1,6 +1,8 @@
 ---
 title: "Analyzing Students' Mental Health"
-author: 'Chiawei Wang'
+author: 'Chiawei Wang, PhD'
+role: 'Data & Product Analyst'
+email: 'chiawei.w@outlook.com'
 date: 'August 2025'
 ---
 
@@ -86,7 +88,3 @@ ORDER BY stay DESC;
 The analysis indicates that international students who remain longer in a foreign country may experience increased depression and acculturative stress. These findings highlight the importance of targeted support for international students, especially those who have been abroad for extended periods.
 
 `Any questions, please reach out!`
-
-Chiawei Wang, PhD\
-Data & Product Analyst\
-<chiawei.w@outlook.com>
