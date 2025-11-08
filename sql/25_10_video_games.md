@@ -8,7 +8,7 @@ date: 'October 2025'
 
 `This case study explores the golden era of video games by analyzing sales data and review scores from both users and critics. By examining trends over the years, we aim to identify periods of exceptional quality and popularity in the gaming industry.`
 
-# Challenge
+# Challenge 
 
 Video games have evolved significantly over the years, with various genres, platforms, and technologies emerging. The challenge is to identify the golden era of video games by analyzing critical and user reception, as well as sales performance.
 
