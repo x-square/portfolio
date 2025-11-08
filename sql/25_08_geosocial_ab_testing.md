@@ -1,6 +1,8 @@
 ---
 title: 'A/B Testing on Mobile Verification Methods'
-author: 'Chiawei Wang'
+author: 'Chiawei Wang, PhD'
+role: 'Data & Product Analyst'
+email: 'chiawei.w@outlook.com'
 date: 'August 2025'
 ---
 
@@ -45,13 +47,13 @@ $$
 \text{average cost}=\frac{\text{sum of costs for SMS and WhatsApp}}{\text{count of successful verifications}}
 $$
 
+: Verified rate and average cost (when successful) by group
+
 | group | verified_rate | avg_cost |
 |-------|---------------|----------|
 | A     | 86.2          | 0.104    |
 | B     | 91.8          | 0.088    |
 | C     | 91.9          | 0.061    |
-
-: Verified rate and average cost (when successful) by group
 
 ```SQL
 -- SQL script for verified rate and average cost
@@ -84,13 +86,13 @@ These metrics work together to provide a clearer picture of where customers face
 
 Version C performed best because it offers flexibility and is more cost-efficient, as WhatsApp is cheaper. Although the majority in Version B and about one-third in Version C preferred SMS, making it the most popular method, promoting WhatsApp verification will help the business operate more sustainably. Since verification rates are similarly high for both channels, this approach does not compromise performance.
 
+: Percentage of chosen method and verified rate by group
+
 | group | sms    | whatsapp | verified_sms | verified_whatsapp  |
 |-------|--------|----------|--------------|--------------------|
 | A     | 100.0  | NULL     | 86.1         | NULL               |
 | B     | 87.9   | 12.1     | 91.7         | 90.8               |
 | C     | 34.8   | 65.2     | 94.2         | 90.5               |
-
-: Percentage of chosen method and verified rate by group
 
 ```sql
 -- SQL script for chosen method and verified rate
@@ -124,6 +126,8 @@ The sample is evenly divided among the three groups, making comparisons fair. Cu
 
 By age, the 25-34 group has the highest completion rate, while rates generally decline in older age groups, especially for those 65 and above. Interestingly, we do not see a drastic drop for the older groups in group C. To make our product more inclusive for all, we should take a closer look at the data by segments as needed.
 
+: Verified rate below 70% by country
+
 | country | verified_rate |
 |---------|---------------|
 | CG      | 0.00          |
@@ -151,8 +155,6 @@ By age, the 25-34 group has the highest completion rate, while rates generally d
 | DO      | 67.1          |
 | EE      | 67.1          |
 
-: Verified rate below 70% by country
-
 ```sql
 -- SQL script for verified rate below 70%
 SELECT
@@ -164,6 +166,8 @@ GROUP BY country
 HAVING verified_rate < 70
 ORDER BY verified_rate, country;
 ```
+
+: Distribution of age group along with age group count and verified rate by group
 
 | group | age   | count_age | verified_rate |
 |-------|-------|-----------|---------------|
@@ -185,8 +189,6 @@ ORDER BY verified_rate, country;
 | C     | 45-54 | 237       | 90.8          |
 | C     | 55-64 | 62        | 89.1          |
 | C     | 65+   | 14        | 85.1          |
-
-: Distribution of age group along with age group count and verified rate by group
 
 ```sql
 -- SQL script for age group distribution and verified rate
@@ -233,13 +235,13 @@ I used Python to run a chi-squared test to see if the differences in verificatio
     - P-value is well below the significance level of 0.01
     - Effect size (Cramér's V): 0.48
 
+: Verified rate by group
+
 | group | verified_rate |
 |-------|---------------|
 | A     | 86.2          |
 | B     | 91.8          |
 | C     | 91.9          |
-
-: Verified rate by group
 
 ```python
 # Python script for chi-squared test
@@ -269,13 +271,13 @@ I used Python to run an ANOVA test to check if the average cost per successful v
     - P-value is well below the significance level of 0.01
     - Effect size (eta-squared): 0.82
 
+: Average cost when successful verification by group
+
 | group | avg_cost |
 |-------|----------|
 | A     | 0.104    |
 | B     | 0.088    |
 | C     | 0.061    |
-
-: Average cost when successful verification by group
 
 ```python
 # Python script for ANOVA test
@@ -330,7 +332,3 @@ Due to time limits, I couldn't run a logistic regression. But, here is an idea:
 - Highlight country-level variation for localisation
 
 `Any questions, please reach out!`
-
-Chiawei Wang, PhD\
-Data & Product Analyst\
-<chiawei.w@outlook.com>
