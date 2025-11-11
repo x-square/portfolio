@@ -15,15 +15,15 @@ International students often face unique challenges when studying abroad, includ
 A Japanese international university conducted a survey in 2018, later approved by multiple ethical and regulatory boards, to investigate the mental health of its students. The study focused on three key measures:
 
 - **Depression** (PHQ-9 test)
-- **Social Connectedness** (SCS test)
-- **Acculturative Stress** (ASISS test)
+- **Social connectedness** (SCS test)
+- **Acculturative stress** (ASISS test)
 
-# Research Questions
+# Research questions
 
 1. Does the length of stay in a foreign country influence the mental health of international students?
 2. Specifically, are longer stays associated with higher levels of depression and acculturative stress?
 
-# Data Overview
+# Data overview
 
 | Index | Column          | Type    | Description                                    |
 | ----- | --------------- | ------- | ---------------------------------------------- |
@@ -80,8 +80,8 @@ ORDER BY stay DESC;
 
 # Insights
 
-- **Depression and Acculturative Stress:** Students with longer stays (10 years) report the highest average depression scores, while those with shorter stays (1–3 years) have lower scores. Acculturative stress also tends to be higher among students with longer stays.
-- **Social Connectedness:** Scores for social connectedness do not show a clear trend with length of stay, suggesting other factors may influence this aspect of mental health.
+- **Depression and acculturative stress:** Students with longer stays (10 years) report the highest average depression scores, while those with shorter stays (1–3 years) have lower scores. Acculturative stress also tends to be higher among students with longer stays.
+- **Social connectedness:** Scores for social connectedness do not show a clear trend with length of stay, suggesting other factors may influence this aspect of mental health.
 
 # Summary
 
