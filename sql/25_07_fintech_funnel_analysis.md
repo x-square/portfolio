@@ -8,7 +8,7 @@ date: 'July 2025'
 
 `This technical analysis uses SQL to examine funnel events at FinTech, focusing on user conversion dynamics and the impact of transfer speed on customer retention.`
 
-# Analysis Review: Understanding the Impact of Speed on Growth
+# Analysis review: Understanding the impact of speed on growth
 
 As a mentor at FinTech, you are reviewing Alex's analysis linking transfer speed to the likelihood of a customer making another transfer within 30 days.
 
@@ -33,7 +33,7 @@ The data shows a negative correlation between transfer speed and conversion rate
 
 I would recommend Alex and the Exchange team to focus on strategies that can further reduce transfer times, especially for those currently taking longer than 24 hours. This could involve optimising backend processes, improving system performance, or enhancing partnerships with financial teams to expedite transfers. Additionally, they should consider conducting user research to understand customer expectations regarding transfer speed and identify areas for improvement. Finally, it would be beneficial to monitor the impact of any changes made on conversion to ensure that efforts are effective in driving growth.
 
-# Data Analysis: Understanding Conversion Dynamics and Anomalies
+# Data analysis: Understanding conversion dynamics and anomalies
 
 This follow-up to Alex's analysis explores conversion dynamics and anomalies in transfer data to highlight areas needing product team attention.
 
