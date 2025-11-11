@@ -8,7 +8,7 @@ date: 'August 2025'
 
 `This technical analysis using SQL presents the findings of an A/B(C) testing experiment conducted by GeoSocial to evaluate the effectiveness of different mobile number verification methods.`
 
-# The Challenge
+# Challenge
 
 For GeoSocial's new phone number verification methods, we have three versions:
 
@@ -16,7 +16,7 @@ For GeoSocial's new phone number verification methods, we have three versions:
 - **Version B:** SMS verification marked, followed by unmarked WhatsApp verification
 - **Version C:** WhatsApp verification marked, followed by unmarked SMS verification
 
-# Data Description
+# Data description
 
 - `verification.csv`
     - **userID:** unique identifier
@@ -33,7 +33,7 @@ For GeoSocial's new phone number verification methods, we have three versions:
     - **sms_usd:** cost of SMS verification in USD
     - **whatsapp_usd:** cost of WhatsApp verification in USD
 
-# Findings of A/B/C Testing and Questions to Address
+# Findings of a/b/c testing and questions to address
 
 ## Which screen is recommended to proceed with?
 
@@ -216,7 +216,7 @@ GROUP BY v.`group`, age
 ORDER BY v.`group`, age;
 ```
 
-# Statistical Analysis and Modelling
+# Statistical analysis and modelling
 
 If time allows, we can expand the analysis to include:
 
@@ -225,7 +225,7 @@ If time allows, we can expand the analysis to include:
 - Logistic regression to predict verification success
 
 
-## Chi-squared Test for Verification Rate by Group
+## Chi-squared test for verification rate by group
 
 I used Python to run a chi-squared test to see if the differences in verification rates between the three groups are real or just luck. The test shows that Groups B and C truly perform better than Group A, and the higher success rates are not due to chance.
 
@@ -261,7 +261,7 @@ else:
     print('in verification rates across the different groups (A, B, C).')
 ```
 
-## ANOVA Test for Average Verification Cost by Group
+## ANOVA test for average verification cost by group
 
 I used Python to run an ANOVA test to check if the average cost per successful verification is truly different across the three groups or just due to chance. The test shows a clear difference, confirming that Group C not only verifies well but also does so at a much lower cost than Groups A and B.
 
@@ -320,7 +320,7 @@ else:
     print('No successful verifications found to perform cost analysis.')
 ```
 
-## Logistic Regression for Verification Success Prediction
+## Logistic Regression for verification success prediction
 
 Due to time limits, I couldn't run a logistic regression. But, here is an idea:
 
