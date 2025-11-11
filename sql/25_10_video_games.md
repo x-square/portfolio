@@ -8,17 +8,17 @@ date: 'October 2025'
 
 `This case study explores the golden era of video games by analyzing sales data and review scores from both users and critics. By examining trends over the years, we aim to identify periods of exceptional quality and popularity in the gaming industry.`
 
-# Challenge 
+# Challenge
 
 Video games have evolved significantly over the years, with various genres, platforms, and technologies emerging. The challenge is to identify the golden era of video games by analyzing critical and user reception, as well as sales performance.
 
-# Research Questions
+# Research questions
 
 1. What are the top ten best-selling video games of all time?
 2. What are the top ten years with the highest average critic ratings?
 3. What are the golden years of video games based on user and critic reviews?
 
-# Data Overview
+# Data overview
 
 ### game_sales
 
@@ -93,7 +93,7 @@ ORDER BY year ASC;
 
 # Results
 
-### Best-Selling Games
+### Best-selling games
 
 | index | name                                      | platform | publisher        | developer         | games_sold | year |
 | ----- | ----------------------------------------- | -------- | ---------------- | ----------------- | ---------- | ---- |
@@ -108,7 +108,7 @@ ORDER BY year ASC;
 | 8     | New Super Mario Bros. for DS              | DS       | Nintendo         | Nintendo EAD      | 30.8       | 2006 |
 | 9     | New Super Mario Bros. Wii for Wii         | Wii      | Nintendo         | Nintendo EAD      | 30.3       | 2009 |
 
-### Top Ten Years with Highest Average Critic Ratings
+### Top ten years with highest average critic ratings
 
 | index | year | num_games | avg_critic_score |
 | ----- | ---- | --------- | ---------------- |
@@ -124,7 +124,7 @@ ORDER BY year ASC;
 | 9     | 2017 | 13        | 8.62             |
 
 
-### Golden Years of Video Games
+### Golden years of video games
 
 | index | year | num_games | avg_critic_score | avg_user_score | diff  |
 | ----- | ---- | --------- | ---------------- | -------------- | ----- |
