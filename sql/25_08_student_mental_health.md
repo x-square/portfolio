@@ -1,142 +1,90 @@
 ---
-title: 'Analyzing Motorcycle Part Sales'
+title: "Analyzing Students' Mental Health"
 author: 'Chiawei Wang, PhD'
 role: 'Data & Product Analyst'
 email: 'chiawei.w@outlook.com'
-date: 'September 2025'
+date: 'August 2025'
 ---
 
-`This document presents a technical case study using SQL to analyze motorcycle part sales data from a company operating three warehouses. The focus is on calculating net revenue from wholesale sales by product line, month, and warehouse.`
+`This document presents a technical case study using SQL to analyze the mental health of international students at a Japanese university, focusing on the relationship between length of stay and mental health outcomes.`
 
 # Challenge
 
-The company operates three warehouses and offers a diverse range of motorcycle parts through both retail and wholesale channels. Payment options include credit card, cash, and bank transfer, each with its own transaction fee. To support the strategic planning, it is important to analyze the net revenue from wholesale sales, broken down by product line, month, and warehouse.
+International students often face unique challenges when studying abroad, including adapting to new cultures, languages, and social environments. These factors can impact their mental health, making it important to understand the risks and predictors of mental health difficulties in this population.
 
-## Research questions
+A Japanese international university conducted a survey in 2018, later approved by multiple ethical and regulatory boards, to investigate the mental health of its students. The study focused on three key measures:
 
-1. What is the net revenue generated from wholesale sales for each product line?
-2. How does this net revenue vary month-to-month and across different warehouses?
+- **Depression** (PHQ-9 test)
+- **Social connectedness** (SCS test)
+- **Acculturative stress** (ASISS test)
 
-## Data overview
+# Research questions
 
-| Index | Column         | Type    | Description                                                     |
-| ----- | -------------- | ------- | --------------------------------------------------------------- |
-| 0     | `order_number` | VARCHAR | Unique order number                                             |
-| 1     | `date`         | DATE    | Date of the order (June to August 2021)                         |
-| 2     | `warehouse`    | VARCHAR | Warehouse where the order was placed: Central, North, or West   |
-| 3     | `client_type`  | VARCHAR | Indicates if the order is Retail or Wholesale                   |
-| 4     | `product_line` | VARCHAR | Type of product ordered                                         |
-| 5     | `quantity`     | INT     | Number of products ordered                                      |
-| 6     | `unit_price`   | FLOAT   | Price per product (in dollars)                                  |
-| 7     | `total`        | FLOAT   | Total price of the order (in dollars)                           |
-| 8     | `payment`      | VARCHAR | Payment method: Credit card, Transfer, or Cash                  |
-| 9     | `payment_fee`  | FLOAT   | Percentage of the total charged as a fee for the payment method |
-| 10    | `order_number` | VARCHAR | Unique order number                                             |
-| 11    | `date`         | DATE    | Date of the order (June to August 2021)                         |
-| 12    | `warehouse`    | VARCHAR | Warehouse where the order was placed: Central, North, or West   |
-| 13    | `client_type`  | VARCHAR | Indicates if the order is Retail or Wholesale                   |
-| 14    | `product_line` | VARCHAR | Type of product ordered                                         |
-| 15    | `quantity`     | INT     | Number of products ordered                                      |
-| 16    | `unit_price`   | FLOAT   | Price per product (in dollars)                                  |
-| 17    | `total`        | FLOAT   | Total price of the order (in dollars)                           |
-| 18    | `payment`      | VARCHAR | Payment method: Credit card, Transfer, or Cash                  |
-| 19    | `payment_fee`  | FLOAT   | Percentage of the total charged as a fee for the payment method |
-| 20    | `order_number` | VARCHAR | Unique order number                                             |
-| 21    | `date`         | DATE    | Date of the order (June to August 2021)                         |
-| 22    | `warehouse`    | VARCHAR | Warehouse where the order was placed: Central, North, or West   |
-| 23    | `client_type`  | VARCHAR | Indicates if the order is Retail or Wholesale                   |
-| 24    | `product_line` | VARCHAR | Type of product ordered                                         |
-| 25    | `quantity`     | INT     | Number of products ordered                                      |
-| 26    | `unit_price`   | FLOAT   | Price per product (in dollars)                                  |
-| 27    | `total`        | FLOAT   | Total price of the order (in dollars)                           |
-| 28    | `payment`      | VARCHAR | Payment method: Credit card, Transfer, or Cash                  |
-| 29    | `payment_fee`  | FLOAT   | Percentage of the total charged as a fee for the payment method |
+1. Does the length of stay in a foreign country influence the mental health of international students?
+2. Specifically, are longer stays associated with higher levels of depression and acculturative stress?
 
-## Approach
+# Data overview
 
-We aim to analyze net revenue from wholesale sales by performing the following steps:
+| Index | Column          | Type    | Description                                    |
+| ----- | --------------- | ------- | ---------------------------------------------- |
+| 0     | `inter_dom`     | VARCHAR | Student type (international or domestic)       |
+| 1     | `japanese_cate` | VARCHAR | Japanese language proficiency                  |
+| 2     | `english_cate`  | VARCHAR | English language proficiency                   |
+| 3     | `academic`      | VARCHAR | Academic level (undergraduate or postgraduate) |
+| 4     | `age`           | INT     | Age of student                                 |
+| 5     | `stay`          | INT     | Length of stay in years                        |
+| 6     | `todep`         | INT     | Depression score (PHQ-9)                       |
+| 7     | `tosc`          | INT     | Social connectedness score (SCS)               |
+| 8     | `toas`          | INT     | Acculturative stress score (ASISS)             |
+| 9     | `inter_dom`     | VARCHAR | Student type (international or domestic)       |
+| 10    | `japanese_cate` | VARCHAR | Japanese language proficiency                  |
+| 11    | `english_cate`  | VARCHAR | English language proficiency                   |
+| 12    | `academic`      | VARCHAR | Academic level (undergraduate or postgraduate) |
+| 13    | `age`           | INT     | Age of student                                 |
+| 14    | `stay`          | INT     | Length of stay in years                        |
+| 15    | `todep`         | INT     | Depression score (PHQ-9)                       |
+| 16    | `tosc`          | INT     | Social connectedness score (SCS)               |
+| 17    | `toas`          | INT     | Acculturative stress score (ASISS)             |
 
-1. Conditionally converting date values
-2. Calculating net revenue
-3. Filtering, grouping, and sorting the results
+# Approach
+
+1. Performing the calculations
+2. Filter and group the data
+3. Ordering records
 
 ```sql
-SELECT product_line,
-       warehouse,
-       CASE WHEN EXTRACT('month' from date) = 6 THEN 'June'
-            WHEN EXTRACT('month' from date) = 7 THEN 'July'
-            WHEN EXTRACT('month' from date) = 8 THEN 'August'
-            END as month,
-       SUM(total) - SUM(payment_fee) AS net_revenue
-FROM sales
-WHERE client_type = 'Wholesale'
-GROUP BY product_line, warehouse, month
-ORDER BY product_line, warehouse, month DESC, net_revenue DESC;
+SELECT stay, 
+       COUNT(*) AS student_count,
+       ROUND(AVG(todep), 2) AS average_phq, 
+       ROUND(AVG(tosc), 2) AS average_scs, 
+       ROUND(AVG(toas), 2) AS average_asiss
+FROM students
+WHERE inter_dom = 'Inter'
+GROUP BY stay
+ORDER BY stay DESC;
 ```
-## Results
 
-| index | product_line          | warehouse | month   | net_revenue |
-| ----- | --------------------- | --------- | ------- | ----------- |
-| 0     | Braking System        | Central   | June    | 3684.89     |
-| 1     | Braking System        | Central   | June    | 3684.89     |
-| 2     | Braking System        | Central   | July    | 3778.65     |
-| 3     | Braking System        | Central   | August  | 3039.41     |
-| 4     | Braking System        | North     | June    | 1487.77     |
-| 5     | Braking System        | North     | July    | 2594.44     |
-| 6     | Braking System        | North     | August  | 1770.84     |
-| 7     | Braking System        | West      | June    | 1212.75     |
-| 8     | Braking System        | West      | July    | 3060.93     |
-| 9     | Braking System        | West      | August  | 2500.67     |
-| 10    | Electrical System     | Central   | June    | 2904.93     |
-| 11    | Electrical System     | Central   | July    | 5577.62     |
-| 12    | Electrical System     | Central   | August  | 3126.43     |
-| 13    | Electrical System     | North     | June    | 2022.5      |
-| 14    | Electrical System     | North     | July    | 1710.13     |
-| 15    | Electrical System     | North     | August  | 4721.12     |
-| 16    | Electrical System     | West      | July    | 449.46      |
-| 17    | Electrical System     | West      | August  | 1241.84     |
-| 18    | Engine                | Central   | June    | 6548.85     |
-| 19    | Engine                | Central   | July    | 1827.03     |
-| 20    | Engine                | Central   | August  | 9528.71     |
-| 21    | Engine                | North     | July    | 1007.14     |
-| 22    | Engine                | North     | August  | 2324.19     |
-| 23    | Frame & Body          | Central   | June    | 5111.34     |
-| 24    | Frame & Body          | Central   | July    | 3135.13     |
-| 25    | Frame & Body          | Central   | August  | 8657.99     |
-| 26    | Frame & Body          | North     | June    | 4910.12     |
-| 27    | Frame & Body          | North     | July    | 6154.61     |
-| 28    | Frame & Body          | North     | August  | 7898.89     |
-| 29    | Frame & Body          | West      | June    | 2779.74     |
-| 30    | Frame & Body          | West      | August  | 829.69      |
-| 31    | Miscellaneous         | Central   | June    | 1878.07     |
-| 32    | Miscellaneous         | Central   | July    | 3118.44     |
-| 33    | Miscellaneous         | Central   | August  | 1739.76     |
-| 34    | Miscellaneous         | North     | June    | 513.99      |
-| 35    | Miscellaneous         | North     | July    | 2404.65     |
-| 36    | Miscellaneous         | North     | August  | 1841.4      |
-| 37    | Miscellaneous         | West      | June    | 2280.97     |
-| 38    | Miscellaneous         | West      | July    | 1156.8      |
-| 39    | Miscellaneous         | West      | August  | 813.43      |
-| 40    | Suspension & Traction | Central   | June    | 3325        |
-| 41    | Suspension & Traction | Central   | July    | 6456.72     |
-| 42    | Suspension & Traction | Central   | August  | 5416.7      |
-| 43    | Suspension & Traction | North     | June    | 8065.74     |
-| 44    | Suspension & Traction | North     | July    | 3714.28     |
-| 45    | Suspension & Traction | North     | August  | 4923.69     |
-| 46    | Suspension & Traction | West      | June    | 2372.52     |
-| 47    | Suspension & Traction | West      | July    | 2939.32     |
-| 48    | Suspension & Traction | West      | August  | 1080.79     |
+# Results
 
-## Insights
+| index | stay | student_count | average_phq | average_scs | average_asiss |
+| ----- | ---- | ------------- | ----------- | ----------- | ------------- |
+| 0     | 10   | 1             | 13          | 32          | 50            |
+| 1     | 8    | 1             | 10          | 44          | 65            |
+| 2     | 7    | 1             | 4           | 48          | 45            |
+| 3     | 6    | 3             | 6           | 38          | 58.67         |
+| 4     | 5    | 1             | 0           | 34          | 91            |
+| 5     | 4    | 14            | 8.57        | 33.93       | 87.71         |
+| 6     | 3    | 46            | 9.09        | 37.13       | 78            |
+| 7     | 2    | 39            | 8.28        | 37.08       | 77.67         |
+| 8     | 1    | 95            | 7.48        | 38.11       | 72.8          |
 
-- **Suspension & Traction Leads Revenue:** The Suspension & Traction product line consistently delivers the highest net revenue across all warehouses, indicating strong and steady demand.
-- **Central Warehouse Outperforms:** The Central warehouse generates the most net revenue overall, suggesting it serves the largest customer base or operates with greater efficiency.
-- **Frame & Body Shows Growth:** The Frame & Body product line demonstrates notable revenue growth, especially in August, pointing to possible seasonal trends or successful promotions.
-- **Engine Sales Spike in August:** Engine-related products see a significant net revenue increase in August, which may be linked to seasonal maintenance cycles or targeted sales campaigns.
-- **Warehouse and Month Variability:** Net revenue varies not only by product line but also by warehouse and month, emphasizing the importance of localized and time-sensitive sales strategies.
+# Insights
 
-## Summary
+- **Depression and acculturative stress:** Students with longer stays (10 years) report the highest average depression scores, while those with shorter stays (1–3 years) have lower scores. Acculturative stress also tends to be higher among students with longer stays.
+- **Social connectedness:** Scores for social connectedness do not show a clear trend with length of stay, suggesting other factors may influence this aspect of mental health.
 
-The analysis of motorcycle part sales reveals key insights into product line performance, warehouse efficiency, and seasonal trends. The Suspension & Traction product line stands out as a consistent revenue driver, while the Central warehouse leads in overall net revenue. Understanding these patterns can inform inventory management, marketing strategies, and operational improvements to enhance profitability across all channels. Optimizing sales strategies based on these findings will be crucial for sustaining growth in the competitive motorcycle parts market.
+# Summary
+
+The analysis indicates that international students who remain longer in a foreign country may experience increased depression and acculturative stress. These findings highlight the importance of targeted support for international students, especially those who have been abroad for extended periods.
 
 `Any questions, please reach out!`
