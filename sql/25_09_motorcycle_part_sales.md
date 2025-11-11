@@ -12,12 +12,12 @@ date: 'September 2025'
 
 The company operates three warehouses and offers a diverse range of motorcycle parts through both retail and wholesale channels. Payment options include credit card, cash, and bank transfer, each with its own transaction fee. To support the strategic planning, it is important to analyze the net revenue from wholesale sales, broken down by product line, month, and warehouse.
 
-## Research Questions
+## Research questions
 
 1. What is the net revenue generated from wholesale sales for each product line?
 2. How does this net revenue vary month-to-month and across different warehouses?
 
-## Data Overview
+## Data overview
 
 | Index | Column         | Type    | Description                                                     |
 | ----- | -------------- | ------- | --------------------------------------------------------------- |
