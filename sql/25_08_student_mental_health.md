@@ -25,26 +25,26 @@ A Japanese international university conducted a survey in 2018, later approved b
 
 # Data overview
 
-| Index | Column          | Type    | Description                                    |
-| ----- | --------------- | ------- | ---------------------------------------------- |
-| 0     | `inter_dom`     | VARCHAR | Student type (international or domestic)       |
-| 1     | `japanese_cate` | VARCHAR | Japanese language proficiency                  |
-| 2     | `english_cate`  | VARCHAR | English language proficiency                   |
-| 3     | `academic`      | VARCHAR | Academic level (undergraduate or postgraduate) |
-| 4     | `age`           | INT     | Age of student                                 |
-| 5     | `stay`          | INT     | Length of stay in years                        |
-| 6     | `todep`         | INT     | Depression score (PHQ-9)                       |
-| 7     | `tosc`          | INT     | Social connectedness score (SCS)               |
-| 8     | `toas`          | INT     | Acculturative stress score (ASISS)             |
-| 9     | `inter_dom`     | VARCHAR | Student type (international or domestic)       |
-| 10    | `japanese_cate` | VARCHAR | Japanese language proficiency                  |
-| 11    | `english_cate`  | VARCHAR | English language proficiency                   |
-| 12    | `academic`      | VARCHAR | Academic level (undergraduate or postgraduate) |
-| 13    | `age`           | INT     | Age of student                                 |
-| 14    | `stay`          | INT     | Length of stay in years                        |
-| 15    | `todep`         | INT     | Depression score (PHQ-9)                       |
-| 16    | `tosc`          | INT     | Social connectedness score (SCS)               |
-| 17    | `toas`          | INT     | Acculturative stress score (ASISS)             |
+| Index | Column        | Type    | Description                                    |
+| ----- | ------------- | ------- | ---------------------------------------------- |
+| 0     | inter_dom     | VARCHAR | Student type (international or domestic)       |
+| 1     | japanese_cate | VARCHAR | Japanese language proficiency                  |
+| 2     | english_cate  | VARCHAR | English language proficiency                   |
+| 3     | academic      | VARCHAR | Academic level (undergraduate or postgraduate) |
+| 4     | age           | INT     | Age of student                                 |
+| 5     | stay          | INT     | Length of stay in years                        |
+| 6     | todep         | INT     | Depression score (PHQ-9)                       |
+| 7     | tosc          | INT     | Social connectedness score (SCS)               |
+| 8     | toas          | INT     | Acculturative stress score (ASISS)             |
+| 9     | inter_dom     | VARCHAR | Student type (international or domestic)       |
+| 10    | japanese_cate | VARCHAR | Japanese language proficiency                  |
+| 11    | english_cate  | VARCHAR | English language proficiency                   |
+| 12    | academic      | VARCHAR | Academic level (undergraduate or postgraduate) |
+| 13    | age           | INT     | Age of student                                 |
+| 14    | stay          | INT     | Length of stay in years                        |
+| 15    | todep         | INT     | Depression score (PHQ-9)                       |
+| 16    | tosc          | INT     | Social connectedness score (SCS)               |
+| 17    | toas          | INT     | Acculturative stress score (ASISS)             |
 
 # Approach
 
