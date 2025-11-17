@@ -22,38 +22,38 @@ Video games have evolved significantly over the years, with various genres, plat
 
 ### game_sales
 
-| Index | Column       | Type    | Description                      |
-| ----- | ------------ | ------- | -------------------------------- |
-| 0     | `name`       | varchar | Name of the video game           |
-| 1     | `platform`   | varchar | Gaming platform                  |
-| 2     | `publisher`  | varchar | Game publisher                   |
-| 3     | `developer`  | varchar | Game developer                   |
-| 4     | `games_sold` | float   | Number of copies sold (millions) |
-| 5     | `year`       | int     | Release year                     |
+| Index | Column     | Type    | Description                      |
+| ----- | ---------- | ------- | -------------------------------- |
+| 0     | name       | VARCHAR | Name of the video game           |
+| 1     | platform   | VARCHAR | Gaming platform                  |
+| 2     | publisher  | VARCHAR | Game publisher                   |
+| 3     | developer  | VARCHAR | Game developer                   |
+| 4     | games_sold | FLOAT   | Number of copies sold (millions) |
+| 5     | year       | INT     | Release year                     |
 
 ### game_reviews
 
-| Index | Column         | Type    | Description                          |
-| ----- | -------------- | ------- | ------------------------------------ |
-| 0     | `name`         | varchar | Name of the video game               |
-| 1     | `critic_score` | float   | Critic score according to Metacritic |
-| 2     | `user_score`   | float   | User score according to Metacritic   |
+| Index | Column       | Type    | Description                          |
+| ----- | ------------ | ------- | ------------------------------------ |
+| 0     | name         | VARCHAR | Name of the video game               |
+| 1     | critic_score | FLOAT   | Critic score according to Metacritic |
+| 2     | user_score   | FLOAT   | User score according to Metacritic   |
 
 ### game_users
 
-| Index | Column           | Type   | Description                                          |
-| ------| ---------------- | ------ | ---------------------------------------------------- |
-| 0     | `year`           | int    | Release year of the games reviewed                   |
-| 1     | `num_games`      | int    | Number of games released that year                   |
-| 2     | `avg_user_score` | float  | Average score of all the games' ratings for the year |
+| Index | Column         | Type   | Description                                          |
+| ------| -------------- | ------ | ---------------------------------------------------- |
+| 0     | year           | INT    | Release year of the games reviewed                   |
+| 1     | num_games      | INT    | Number of games released that year                   |
+| 2     | avg_user_score | FLOAT  | Average score of all the games' ratings for the year |
 
 ### game_critics
 
-| Index | Column             | Type  | Description                                                 |
-| ------| ------------------ | ----- | ----------------------------------------------------------- |
-| 0     | `year`             | int   | Release year of the games reviewed                          |
-| 1     | `num_games`        | int   | Number of games released that year                          |
-| 2     | `avg_critic_score` | float | Average critic score of all the games' ratings for the year |
+| Index | Column           | Type  | Description                                                 |
+| ------| ---------------- | ----- | ----------------------------------------------------------- |
+| 0     | year             | INT   | Release year of the games reviewed                          |
+| 1     | num_games        | INT   | Number of games released that year                          |
+| 2     | avg_critic_score | FLOAT | Average critic score of all the games' ratings for the year |
 
 # Approach
 
