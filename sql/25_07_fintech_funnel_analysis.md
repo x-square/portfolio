@@ -14,12 +14,12 @@ As a mentor at FinTech, you are reviewing Alex's analysis linking transfer speed
 
 : Impact of speed on growth
 
-| **Speed of transfer** | **Conversion to next transfer in 30 days** |
-| --------------------- | ------------------------------------------ |
-| 0 - 1 h               | 87%                                        |
-| 1 - 12 h              | 76%                                        |
-| 12 - 24 h             | 66%                                        |
-| 24+ h                 | 61%                                        |
+| Speed of transfer | Conversion to next transfer in 30 days |
+| ----------------- | -------------------------------------- |
+| 0 - 1 h           | 87%                                    |
+| 1 - 12 h          | 76%                                    |
+| 12 - 24 h         | 66%                                    |
+| 24+ h             | 61%                                    |
 
 ## How do you think Alex would interpret these results?
 
@@ -62,9 +62,9 @@ FROM funnel_analysis;
 
 : Overall conversion rates
 
-| **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
-| ----------------- | ---------------- | --------------------- | -------------------------------- | ------------------------------------ |
-| 40,782            | 18,292           | 13,057                | 44.85%                           | 71.34%                               |
+| users created | users funded | users transferred | conversion created to funded | conversion funded to transferred |
+| ------------- | ------------ | ----------------- | ---------------------------- | -------------------------------- |
+| 40,782        | 18,292       | 13,057            | 44.85%                       | 71.34%                           |
 
 ## Are there any irregularities in the data that the product team should investigate? What could be causing them from the user's perspective?
 
@@ -101,25 +101,24 @@ ORDER BY region ASC;
 
 : Conversion rates by region
 
-| **region** | **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
-| ---------- | ----------------- | ---------------- | --------------------- | -------------------------------- | ------------------------------------ |
-| Europe     | 22,309            | 10,729           | 7,003                 | 48.09%                           | 65.28%                               |
-| SouthAm    | 11,904            | 5,222            | 3,715                 | 43.87%                           | 71.13%                               |
-| Asia       | 6,736             | 1,865            | 1,733                 | 27.69%                           | 92.92%                               |
-
+| region  | users created | users funded | users transferred | conversion created to funded | conversion funded to transferred |
+| ------- | ------------- | ------------ | ----------------- | ---------------------------- | -------------------------------- |
+| Europe  | 22,309        | 10,729       | 7,003             | 48.09%                       | 65.28%                           |
+| SouthAm | 11,904        | 5,222        | 3,715             | 43.87%                       | 71.13%                           |
+| Asia    | 6,736         | 1,865        | 1,733             | 27.69%                       | 92.92%                           |
 : Conversion rates by platform
 
-| **platform** | **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
-| ------------ | ----------------- | ---------------- | --------------------- | -------------------------------- | ------------------------------------ |
-| Android      | 15,423            | 6,149            | 4,386                 | 39.86%                           | 71.32%                               |
-| Web          | 11,450            | 4,173            | 3,047                 | 36.42%                           | 73.04%                               |
-| iOS          | 13,909            | 7,970            | 5,624                 | 55.01%                           | 65.89%                               |
+| platform | users created | users funded | users transferred | conversion created to funded | conversion funded to transferred |
+| -------- | ------------- | ------------ | ----------------- | ---------------------------- | -------------------------------- |
+| Android  | 15,423        | 6,149        | 4,386             | 39.86%                       | 71.32%                           |
+| Web      | 11,450        | 4,173        | 3,047             | 36.42%                       | 73.04%                           |
+| iOS      | 13,909        | 7,970        | 5,624             | 55.01%                       | 65.89%                           |
 
 : Conversion rates by experience
 
-| **experience** | **users created** | **users funded** | **users transferred** | **conversion created to funded** | **conversion funded to transferred** |
-| -------------- | ----------------- | ---------------- | --------------------- | -------------------------------- | ------------------------------------ |
-| Existing       | 23,957            | 14,404           | 9,689                 | 60.14%                           | 67.25%                               |
-| New            | 16,825            | 3,888            | 2,939                 | 23.71%                           | 75.62%                               |
+| experience | users created | users funded | users transferred | conversion created to funded | conversion funded to transferred |
+| ---------- | ------------- | ------------ | ----------------- | ---------------------------- | -------------------------------- |
+| Existing   | 23,957        | 14,404       | 9,689             | 60.14%                       | 67.25%                           |
+| New        | 16,825        | 3,888        | 2,939             | 23.71%                       | 75.62%                           |
 
 `Any questions, please reach out!`
