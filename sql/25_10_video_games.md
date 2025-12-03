@@ -1,7 +1,7 @@
 ---
 title: 'When Was the Golden Era of Video Games?'
 author: 'Chiawei Wang, PhD'
-role: 'Data & Product Analyst'
+role: 'Analytics Professional'
 email: 'chiawei.w@outlook.com'
 date: 'October 2025'
 ---
@@ -29,7 +29,7 @@ Video games have evolved significantly over the years, with various genres, plat
 | 2     | publisher  | VARCHAR | Game publisher                   |
 | 3     | developer  | VARCHAR | Game developer                   |
 | 4     | games_sold | FLOAT   | Number of copies sold (millions) |
-| 5     | year       | INT     | Release year                     |
+| 5     | year       | INTEGER | Release year                     |
 
 ### game_reviews
 
@@ -41,19 +41,19 @@ Video games have evolved significantly over the years, with various genres, plat
 
 ### game_users
 
-| Index | Column         | Type   | Description                                          |
-| ------| -------------- | ------ | ---------------------------------------------------- |
-| 0     | year           | INT    | Release year of the games reviewed                   |
-| 1     | num_games      | INT    | Number of games released that year                   |
-| 2     | avg_user_score | FLOAT  | Average score of all the games' ratings for the year |
+| Index | Column         | Type    | Description                                          |
+| ------| -------------- | ------- | ---------------------------------------------------- |
+| 0     | year           | INTEGER | Release year of the games reviewed                   |
+| 1     | num_games      | INTEGER | Number of games released that year                   |
+| 2     | avg_user_score | FLOAT   | Average score of all the games' ratings for the year |
 
 ### game_critics
 
-| Index | Column           | Type  | Description                                                 |
-| ------| ---------------- | ----- | ----------------------------------------------------------- |
-| 0     | year             | INT   | Release year of the games reviewed                          |
-| 1     | num_games        | INT   | Number of games released that year                          |
-| 2     | avg_critic_score | FLOAT | Average critic score of all the games' ratings for the year |
+| Index | Column           | Type    | Description                                                 |
+| ------| ---------------- | ------- | ----------------------------------------------------------- |
+| 0     | year             | INTEGER | Release year of the games reviewed                          |
+| 1     | num_games        | INTEGER | Number of games released that year                          |
+| 2     | avg_critic_score | FLOAT   | Average critic score of all the games' ratings for the year |
 
 # Approach
 
