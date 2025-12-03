@@ -1,7 +1,7 @@
 ---
 title: 'A/B Testing on Mobile Verification Methods'
 author: 'Chiawei Wang, PhD'
-role: 'Data & Product Analyst'
+role: 'Analytics Professional'
 email: 'chiawei.w@outlook.com'
 date: 'August 2025'
 ---
