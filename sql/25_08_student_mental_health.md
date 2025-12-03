@@ -1,7 +1,7 @@
 ---
 title: "Analyzing Students' Mental Health"
 author: 'Chiawei Wang, PhD'
-role: 'Data & Product Analyst'
+role: 'Analytics Professional'
 email: 'chiawei.w@outlook.com'
 date: 'August 2025'
 ---
@@ -31,12 +31,11 @@ A Japanese international university conducted a survey in 2018, later approved b
 | 1     | japanese_cate | VARCHAR | Japanese language proficiency                  |
 | 2     | english_cate  | VARCHAR | English language proficiency                   |
 | 3     | academic      | VARCHAR | Academic level (undergraduate or postgraduate) |
-| 4     | age           | INT     | Age of student                                 |
-| 5     | stay          | INT     | Length of stay in years                        |
-| 6     | todep         | INT     | Depression score (PHQ-9)                       |
-| 7     | tosc          | INT     | Social connectedness score (SCS)               |
-| 8     | toas          | INT     | Acculturative stress score (ASISS)             |
-
+| 4     | age           | INTEGER | Age of student                                 |
+| 5     | stay          | INTEGER | Length of stay in years                        |
+| 6     | todep         | INTEGER | Depression score (PHQ-9)                       |
+| 7     | tosc          | INTEGER | Social connectedness score (SCS)               |
+| 8     | toas          | INTEGER | Acculturative stress score (ASISS)             |
 # Approach
 
 1. Performing the calculations
