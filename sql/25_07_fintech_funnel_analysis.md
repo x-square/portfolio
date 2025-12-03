@@ -1,7 +1,7 @@
 ---
 title: 'Segmented Funnel Analysis of Transfer Conversion Dynamics'
 author: 'Chiawei Wang, PhD'
-role: 'Data & Product Analyst'
+role: 'Analytics Professional'
 email: 'chiawei.w@outlook.com'
 date: 'July 2025'
 ---
