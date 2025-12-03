@@ -1,7 +1,7 @@
 ---
 title: 'Analyzing Motorcycle Part Sales'
 author: 'Chiawei Wang, PhD'
-role: 'Data & Product Analyst'
+role: 'Analytics Professional'
 email: 'chiawei.w@outlook.com'
 date: 'September 2025'
 ---
@@ -26,7 +26,7 @@ The company operates three warehouses and offers a diverse range of motorcycle p
 | 2     | warehouse    | VARCHAR | Warehouse where the order was placed: Central, North, or West   |
 | 3     | client_type  | VARCHAR | Indicates if the order is Retail or Wholesale                   |
 | 4     | product_line | VARCHAR | Type of product ordered                                         |
-| 5     | quantity     | INT     | Number of products ordered                                      |
+| 5     | quantity     | INTEGER | Number of products ordered                                      |
 | 6     | unit_price   | FLOAT   | Price per product (in dollars)                                  |
 | 7     | total        | FLOAT   | Total price of the order (in dollars)                           |
 | 8     | payment      | VARCHAR | Payment method: Credit card, Transfer, or Cash                  |
@@ -36,7 +36,7 @@ The company operates three warehouses and offers a diverse range of motorcycle p
 | 12    | warehouse    | VARCHAR | Warehouse where the order was placed: Central, North, or West   |
 | 13    | client_type  | VARCHAR | Indicates if the order is Retail or Wholesale                   |
 | 14    | product_line | VARCHAR | Type of product ordered                                         |
-| 15    | quantity     | INT     | Number of products ordered                                      |
+| 15    | quantity     | INTEGER | Number of products ordered                                      |
 | 16    | unit_price   | FLOAT   | Price per product (in dollars)                                  |
 | 17    | total        | FLOAT   | Total price of the order (in dollars)                           |
 | 18    | payment      | VARCHAR | Payment method: Credit card, Transfer, or Cash                  |
@@ -46,7 +46,7 @@ The company operates three warehouses and offers a diverse range of motorcycle p
 | 22    | warehouse    | VARCHAR | Warehouse where the order was placed: Central, North, or West   |
 | 23    | client_type  | VARCHAR | Indicates if the order is Retail or Wholesale                   |
 | 24    | product_line | VARCHAR | Type of product ordered                                         |
-| 25    | quantity     | INT     | Number of products ordered                                      |
+| 25    | quantity     | INTEGER | Number of products ordered                                      |
 | 26    | unit_price   | FLOAT   | Price per product (in dollars)                                  |
 | 27    | total        | FLOAT   | Total price of the order (in dollars)                           |
 | 28    | payment      | VARCHAR | Payment method: Credit card, Transfer, or Cash                  |
